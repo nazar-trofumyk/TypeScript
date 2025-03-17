@@ -64,7 +64,14 @@ else {
 // #3ckURgvs
 // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
 // (в першу, другу, третю или четверту частину години).
-//
+let time = 0;
+time = 30;
+if (time >= 0 && time <= 15) {
+    console.log('Перша чверть');
+}
+else if (time > 15 && time <= 30) {
+    console.log('Друга чверть');
+}
 // #UMoNq4biWGe
 // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 //
@@ -73,7 +80,16 @@ else {
 //     вводить
 //     порядковий номер дня тижня і на екрані відображається інфа що \
 //     заплановано на цей день (можна замість плану на день, назву дня англійською).
-//
+let day = prompt('Enter day (1-7)');
+switch (day) {
+    case "Monday": {
+        alert('Monday:go to the gym');
+        break;
+    }
+    case "Tuesday": {
+        alert("Tuesday:you will go lear TS");
+    }
+}
 //     #uwsz1RnTQJ1
 //     - Користувач вводить або має два числа.
 //         Потрібно знайти та вивести максимальне число з тих двох .
@@ -82,10 +98,20 @@ else {
 //         #iBvqtjEm
 //     - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //         буде присвоювати змінній х значення "default"  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
-//
 //     #awLXL6TBzg
 //     - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray.
 //         За допомоги іф перевірити кожен його елемент на тривалість навчання.
 //         У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
-//
-//
+let coursesAndDurationArray = [
+    { title: 'JavaScript Complex', monthDuration: 5 },
+    { title: 'Java Complex', monthDuration: 6 },
+    { title: 'Python Complex', monthDuration: 6 },
+    { title: 'QA Complex', monthDuration: 4 },
+    { title: 'FullStack', monthDuration: 7 },
+    { title: 'Frontend', monthDuration: 4 }
+];
+for (const item of coursesAndDurationArray) {
+    if (item.monthDuration >= 5) {
+        console.log(item.monthDuration, 'Super');
+    }
+}
