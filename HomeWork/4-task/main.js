@@ -30,13 +30,12 @@ function exchange(sumUAH, currencyArr, exchangeCurrency) {
     for (const currencyItem of currencyArr) {
         if (currencyItem.currency === exchangeCurrency) {
             chosenCur = currencyItem;
-            break;
         }
         // let result:number = sumUAH/chosenCur.value
     }
     return chosenCur ? sumUAH / chosenCur.value : undefined;
 }
-console.log(exchange(10000, [{ currency: 'USD', value: 25 }, { currency: 'EUR', value: 42 }], 'USD'));
+console.log(exchange(2000, [{ currency: 'USD', value: 25 }, { currency: 'EUR', value: 42 }], 'USD'));
 // Приклад exchange(10000,[{currency:’USD’,value:25},{currency:’EUR’,value:42}],’USD’) // => 400
 //
 // function exchange(sum:number,currency:CurrencyType[],exchangeCurrency:string):number{
